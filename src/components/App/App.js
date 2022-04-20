@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import getQuotes from '../../apiCalls';
+import Header from '../Header/Header';
 import Form from '../Form/Form';
 import Entries from '../Entries/Entries';
+import { Route } from 'react-router-dom';
 
 function App() {
   const [quotes, setQuotes] = useState('');
@@ -27,9 +29,15 @@ function App() {
 
   return (
     <div className="App">
-      <Form quotes={quotes} addEntry={addEntry}/>
-      {!entries.length && <h2>no previous entries yet</h2>}
-      <Entries entries={entries}/>
+      <Route exact path='/'>
+        <Header />
+        <Form quotes={quotes} addEntry={addEntry}/>
+      </Route>
+      <Route exact path='/entries'>
+        <Header />
+        {!entries.length && <h2>no previous entries yet</h2>}
+        <Entries entries={entries}/>
+      </Route>
     </div>
   );
 }
