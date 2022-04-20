@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 body {
   font-family: 'Raleway', sans-serif;
-  color: #9C5020;
+  color:#9C5020
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
