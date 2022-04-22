@@ -2,15 +2,16 @@ import React from 'react';
 import './ToDoList.css';
 import Task from '../Task/Task';
 
-const ToDoList = ({ todos, deleteTask }) => {
+const ToDoList = ({ todos, handleTask, deleteTask }) => {
 
   const allTodos = todos.map( todo => {
     return (
         <Task 
           {...todo} 
           key={todo.id}
+          handleTask={handleTask}
           deleteTask={deleteTask}
-          />
+        />
     )
   })
 
