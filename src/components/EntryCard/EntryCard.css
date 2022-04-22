@@ -2,21 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
   padding: 5px;
   background: #FFFFFF;
-  opacity: 0.8;
+  opacity: 0.9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 30%;
-  height: 3%;
+  width: 45%;
+  height: fit-content;
 }
 
-.diary-entry {
+.entry {
   overflow-wrap: break-word;
+  max-height: 50px;
   overflow-y: scroll;
 }
 
 .like-button {
   background-color: #FFFFFF;
   border: none
+}
+
+.entry-text {
+  width: 100%;
 }
