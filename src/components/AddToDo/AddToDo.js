@@ -12,6 +12,7 @@ const AddToDo = ({ addTask }) => {
     event.preventDefault();
     const newTodo = {
       id: Date.now(),
+      checked: false,
       todo: task
     }
     addTask(newTodo);
