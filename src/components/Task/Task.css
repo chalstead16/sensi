@@ -1,5 +1,21 @@
 .task {
   display: flex;
   flex-direction: row;
-  max-width: 80%;
+  justify-content: center;
+  width: 80%;
+}
+
+.delete-button {
+  color: #9C5020;
+  font-family: 'Raleway', sans-serif;
+  background-color: #ffffff;
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+input {
+  margin-right: 10px;
+  border-radius: 5px;
 }
