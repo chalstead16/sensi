@@ -1,19 +1,14 @@
 import React, { useState } from 'react';
 import './Task.css';
 
-const Task = ({ todo, id, deleteTask }) => {
-  const [taskStatus, setTaskStatus] = useState(false);
-
-  const handleChange = () => {
-    !taskStatus ? setTaskStatus(true): setTaskStatus(false);
-  }
+const Task = ({ todo, id, checked, handleTask, deleteTask }) => {
 
   return (
     <form className='task'>
       <input 
         type='checkbox'
-        checked={taskStatus}
-        onChange={() => handleChange()}
+        checked={checked}
+        onChange={() => handleTask(id)}
       />
       <p>{todo}</p>
       <button

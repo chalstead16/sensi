@@ -33,7 +33,7 @@ label {
 
 .diary-entry {
   margin-top: 5px;
-  border: 1px #9C5020;
+  border: 1px whitesmoke solid;
   border-radius: 10px;
   height: 100px;
   width: 90%;
@@ -53,5 +53,4 @@ label {
   font-size: large;
   background-color: #ffffff;
   opacity: 0.8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

@@ -25,12 +25,15 @@
 }
 
 .add-task-input {
-  margin-top: 5px;
-  border: 1px #9C5020;
+  border: 1px whitesmoke solid;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
   width: 90%;
   color: #9C5020;
   font-family: 'Raleway', sans-serif;
   text-align: left;
+}
+
+h2 {
+  margin-bottom: 2px;
 }

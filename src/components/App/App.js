@@ -13,7 +13,6 @@ function App() {
   const [error, setError] = useState('');
   const [entries, setEntries] = useState([]);
   const [todos, setTodos] = useState([]);
-  const [status, setStatus] = useState(false);
 
 
   useEffect(() => {
@@ -29,8 +28,26 @@ function App() {
     setEntries([...entries, newEntry]);
   }
 
+  const handleLike = (id) => {
+    const updatedEntries = entries.map(entry => {
+      if(entry.id === id) {
+        entry.like = !entry.like
+      } return entry
+    })
+    setEntries(updatedEntries)
+  }
+
   const addTask = (newTask) => {
     setTodos([...todos, newTask]);
+  }
+
+  const handleTask = (id) => {
+    const updatedTasks = todos.map(todo => {
+      if (todo.id === id) {
+        todo.checked = !todo.checked
+      } return todo;
+    })
+    setTodos(updatedTasks)
   }
 
   const deleteTask = (id) => {
@@ -44,13 +61,17 @@ function App() {
       <Route exact path='/'>
         <Header />
         <Form quotes={quotes} addEntry={addEntry}/>
-        <ToDoList todos={todos} deleteTask={deleteTask}/>
+        <ToDoList 
+          todos={todos} 
+          handleTask={handleTask} 
+          deleteTask={deleteTask}
+        />
         <AddToDo addTask={addTask} />
       </Route>
       <Route exact path='/entries'>
         <Header />
         {!entries.length && <h2>no previous entries yet</h2>}
-        <Entries entries={entries}/>
+        <Entries entries={entries} handleLike={handleLike}/>
       </Route>
     </div>
   );
