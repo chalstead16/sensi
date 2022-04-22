@@ -1,14 +1,11 @@
 import React from 'react';
+import './Entries.css';
 import EntryCard from '../EntryCard/EntryCard';
 
-const Entries = ({ entries }) => {
+const Entries = ({ entries, handleLike }) => {
 
   const entryCards = entries.map(entry => {
-    return (
-      <div key={entry.id}>
-        <EntryCard {...entry}/>
-      </div>
-    )
+    return <EntryCard {...entry} key={entry.id} handleLike={handleLike}/>
   })
 
   return (
