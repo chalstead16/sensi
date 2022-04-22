@@ -14,7 +14,8 @@ const Form = ({ quotes, addEntry }) => {
       id: Date.now(),
       quote: quotes.quote,
       author: quotes.author,
-      diaryEntry: entry
+      diaryEntry: entry,
+      like: false
     }
     addEntry(newEntry);
     clearInputs();
