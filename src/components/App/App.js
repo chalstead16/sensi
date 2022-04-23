@@ -14,13 +14,11 @@ function App() {
   const [entries, setEntries] = useState([]);
   const [todos, setTodos] = useState([]);
 
-
   useEffect(() => {
     getQuotes()
     .then(data => setQuotes(data))
     .catch(error => {
       setError('Hmm.. something went wrong')
-
     })
   }, [])
 
@@ -60,7 +58,10 @@ function App() {
     <div className="App">
       <Route exact path='/'>
         <Header />
-        <Form quotes={quotes} addEntry={addEntry}/>
+        <Form 
+          quotes={quotes}
+          addEntry={addEntry}
+        />
         <ToDoList 
           todos={todos} 
           handleTask={handleTask} 
