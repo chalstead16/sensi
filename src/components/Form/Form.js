@@ -3,9 +3,14 @@ import './Form.css';
 
 const Form = ({ quotes, addEntry }) => {
   const [entry, setEntry] = useState('');
+  const [currentEmotion, setCurrentEmotion] = useState('');
 
   const handleChange = (event) => {
     setEntry(event.target.value);
+  }
+
+  const handleClick = (emotion) => {
+    setCurrentEmotion(emotion);
   }
 
   const submitEntry = (event) => {
@@ -14,6 +19,7 @@ const Form = ({ quotes, addEntry }) => {
       id: Date.now(),
       quote: quotes.quote,
       author: quotes.author,
+      emotion: currentEmotion,
       diaryEntry: entry,
       like: false
     }
@@ -22,7 +28,8 @@ const Form = ({ quotes, addEntry }) => {
   }
 
   const clearInputs = () => {
-    setEntry('')
+    setCurrentEmotion('');
+    setEntry('');
   }
 
   return (
@@ -30,7 +37,15 @@ const Form = ({ quotes, addEntry }) => {
       <form>
         <h2 className="quote">"{quotes.quote}"</h2>
         <h3 className="quote-author">{quotes.author}</h3>
-        <label>I'm currently feeling...</label>
+        <h3>i'm currently feeling...</h3>
+        <div className='emotion-form'>
+          <img className='excited' src='excited.png' alt='excited' onClick={() => handleClick('excited')}/>
+          <img className='happy' src='happy.png' alt='happy' onClick={() => handleClick('happy')}/>
+          <img className='neutral' src='neutral.png' alt='neutral' onClick={() => handleClick('neutral')}/>
+          <img className='upset' src='upset.png' alt='upset' onClick={() => handleClick('upset')}/>
+          <img className='tired' src='tired.png' alt='tired' onClick={() => handleClick('tired')}/>
+        </div>
+        <h3>my thoughts...</h3>
         <textarea
           className='diary-entry'
           type='text'
