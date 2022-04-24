@@ -3,7 +3,7 @@ import React from 'react';
 const Error = () => {
   return (
     <div className='error'>
-      <p>Hmm.. something went wrong, try again later.</p>
+      <p>Hmm.. try going back to the homepage - click sensi.</p>
     </div>
   )
 }
