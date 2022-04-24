@@ -1,4 +1,4 @@
-# sesni 
+# sesni :fallen_leaf:
 
 the *sensi*ble app for *sensi*tive people by [Casey Halstead](https://github.com/chalstead16)
 
