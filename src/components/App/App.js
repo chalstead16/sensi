@@ -73,7 +73,7 @@ function App() {
       </Route>
       <Route exact path='/entries'>
         <Header />
-        {!entries.length && <h2>no previous entries yet</h2>}
+        {!entries.length && <h2>no previous entries</h2>}
         <Entries entries={entries} handleLike={handleLike}/>
       </Route>
       <Route>
