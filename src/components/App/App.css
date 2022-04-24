@@ -13,8 +13,12 @@ body {
   width: 80%;
 }
 
-@media screen and (max-width: 25em) {
+@media screen and (max-width: 30em) {
   .App {
-    width: 200%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 }

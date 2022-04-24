@@ -9,3 +9,9 @@
   border-radius: 10px;
   width: 55%; 
 }
+
+@media screen and (max-width: 30em) {
+  .todo-list {
+    width: 100%;
+  }
+}
