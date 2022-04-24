@@ -6,7 +6,8 @@ import Form from '../Form/Form';
 import ToDoList from '../ToDoList/ToDoList';
 import AddToDo from '../AddToDo/AddToDo';
 import Entries from '../Entries/Entries';
-import { Route } from 'react-router-dom';
+import Error from '../Error/Error';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
   const [quotes, setQuotes] = useState('');
@@ -17,8 +18,8 @@ function App() {
   useEffect(() => {
     getQuotes()
     .then(data => setQuotes(data))
-    .catch(error => {
-      setError('Hmm.. something went wrong')
+    .catch(err => {
+      setError(err.message)
     })
   }, [])
 
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      <Switch>
       <Route exact path='/'>
         <Header />
         <Form 
@@ -74,6 +76,12 @@ function App() {
         {!entries.length && <h2>no previous entries yet</h2>}
         <Entries entries={entries} handleLike={handleLike}/>
       </Route>
+      <Route>
+        <Redirect to='/error' />
+        <Header />
+        <Error />
+      </Route>
+    </Switch>
     </div>
   );
 }
