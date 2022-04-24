@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ToDoList.css';
 import Task from '../Task/Task';
 
@@ -25,3 +26,9 @@ const ToDoList = ({ todos, handleTask, deleteTask }) => {
 }
 
 export default ToDoList;
+
+ToDoList.propTypes = {
+  todos: PropTypes.array.isRequired,
+  handleTask: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired
+}
