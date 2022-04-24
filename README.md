@@ -11,10 +11,11 @@ the *sensi*ble app for *sensi*tive people by [Casey Halstead](https://github.com
 - CSS/ SCSS
 - Figma
 - GitHub
+- Surge
 
 ## Deploy Link
 
-
+[sensi](https://sensi.surge.sh/) - deployed with Surge
 
 ## Visual Demo & Functionality
 
