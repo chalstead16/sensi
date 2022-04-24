@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import './Form.css';
 
 const Form = ({ quotes, addEntry }) => {
@@ -62,3 +63,8 @@ const Form = ({ quotes, addEntry }) => {
 }
 
 export default Form;
+
+Form.propTypes = {
+  quotes: PropTypes.object.isRequired,
+  addEntry: PropTypes.func.isRequired
+}
