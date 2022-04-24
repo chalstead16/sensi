@@ -34,7 +34,7 @@ const Form = ({ quotes, addEntry }) => {
 
   return (
     <div className="form">
-      <form>
+      <form className='main-form'>
         <h2 className="quote">"{quotes.quote}"</h2>
         <h3 className="quote-author">{quotes.author}</h3>
         <h3>i'm currently feeling...</h3>
