@@ -5,7 +5,8 @@ const Task = ({ todo, id, checked, handleTask, deleteTask }) => {
 
   return (
     <form className='task'>
-      <input 
+      <input
+        className='checkbox' 
         type='checkbox'
         checked={checked}
         onChange={() => handleTask(id)}
