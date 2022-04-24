@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import './Task.css';
 
 const Task = ({ todo, id, checked, handleTask, deleteTask }) => {
@@ -21,3 +22,11 @@ const Task = ({ todo, id, checked, handleTask, deleteTask }) => {
 }
 
 export default Task;
+
+Task.propTypes = {
+  todo: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  checked: PropTypes.bool.isRequired,
+  handleTask: PropTypes.func.isRequired,
+  deleteTask: PropTypes.func.isRequired
+}

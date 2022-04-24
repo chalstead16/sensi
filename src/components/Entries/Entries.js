@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Entries.css';
 import EntryCard from '../EntryCard/EntryCard';
 
@@ -16,3 +17,8 @@ const Entries = ({ entries, handleLike }) => {
 }
 
 export default Entries;
+
+Entries.propTypes = {
+  entries: PropTypes.array.isRequired,
+  handleLike: PropTypes.func.isRequired
+}

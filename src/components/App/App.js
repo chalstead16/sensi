@@ -10,7 +10,7 @@ import Error from '../Error/Error';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 function App() {
-  const [quotes, setQuotes] = useState('');
+  const [quotes, setQuotes] = useState({});
   const [error, setError] = useState('');
   const [entries, setEntries] = useState([]);
   const [todos, setTodos] = useState([]);
