@@ -4,7 +4,7 @@ import './Form.css';
 
 const Form = ({ quotes, addEntry }) => {
   const [entry, setEntry] = useState('');
-  const [currentEmotion, setCurrentEmotion] = useState('');
+  const [currentEmotion, setCurrentEmotion] = useState('not recorded');
 
   const handleChange = (event) => {
     setEntry(event.target.value);

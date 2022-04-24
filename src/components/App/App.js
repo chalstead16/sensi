@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   const addEntry = (newEntry) => {
-    setEntries([...entries, newEntry]);
+    setEntries([newEntry, ...entries]);
   }
 
   const handleLike = (id) => {
@@ -37,7 +37,7 @@ function App() {
   }
 
   const addTask = (newTask) => {
-    setTodos([...todos, newTask]);
+    setTodos([newTask, ...todos]);
   }
 
   const handleTask = (id) => {

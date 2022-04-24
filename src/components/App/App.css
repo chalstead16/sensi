@@ -11,5 +11,10 @@ body {
   text-align: center;
   align-items: center;
   width: 80%;
-  height: 100%;
+}
+
+@media screen and (max-width: 25em) {
+  .App {
+    width: 200%;
+  }
 }

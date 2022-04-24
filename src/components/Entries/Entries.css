@@ -7,3 +7,10 @@
  overflow-y: scroll;
  opacity: 0.8;
 }
+
+@media screen and (max-width: 25em) {
+  .entries-container {
+    max-height: 100%;
+    margin-top: 5px;
+  }
+}
