@@ -5,12 +5,15 @@
  justify-content: space-evenly;
  overflow-y: scroll;
  opacity: 0.8;
- margin-bottom: 99vh;
+ height: 90%;
+ margin-top: 15px;
+ margin-bottom: 5px;
 }
 
-@media screen and (max-width: 25em) {
+@media screen and (max-width: 30em) {
   .entries-container {
     max-height: 95%;
-    margin-top: 5px;
+    width: 100%;
+    margin-top: 15px;
   }
 }
